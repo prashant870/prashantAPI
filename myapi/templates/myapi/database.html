@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    table{
+        width:100%;
+    }
+    table,th,td,tr{
+        border:1px solid black;
+        text-align:center;
+        border-collapse:collapse;
+    }
+    tr:hover{
+        background-color:grey;
+        color:red;
+    }
+    th{
+        color:green;
+    }
+    </style>
+</head>
+<body>
+    <table>
+    <tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>ROLL</th>
+    <th>CITY</th>
+    </tr>
+    
+    {% for p in prashant %}
+    <tr>
+    <td>{{p.id}}</td>
+    <td>{{p.name}}</td>
+    <td>{{p.roll}}</td>
+    <td>{{p.city}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
